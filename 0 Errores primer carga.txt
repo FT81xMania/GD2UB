@@ -1,0 +1,191 @@
+ATENCIÓN: Categoría '' en librería Bridge no es válida. Configurando a 'Uncategorized'
+ATENCIÓN: Categoría '' en librería Esplora no es válida. Configurando a 'Uncategorized'
+ATENCIÓN: Categoría '' en librería Ethernet no es válida. Configurando a 'Uncategorized'
+ATENCIÓN: Categoría '' en librería Firmata no es válida. Configurando a 'Uncategorized'
+ATENCIÓN: Categoría '' en librería GSM no es válida. Configurando a 'Uncategorized'
+ATENCIÓN: Categoría '' en librería Robot IR Remote no es válida. Configurando a 'Uncategorized'
+ATENCIÓN: Categoría '' en librería Robot Control no es válida. Configurando a 'Uncategorized'
+ATENCIÓN: Categoría '' en librería Robot Motor no es válida. Configurando a 'Uncategorized'
+ATENCIÓN: Categoría '' en librería Scheduler no es válida. Configurando a 'Uncategorized'
+ATENCIÓN: Categoría '' en librería SpacebrewYun no es válida. Configurando a 'Uncategorized'
+ATENCIÓN: Categoría '' en librería Stepper no es válida. Configurando a 'Uncategorized'
+ATENCIÓN: Categoría '' en librería TFT no es válida. Configurando a 'Uncategorized'
+ATENCIÓN: Categoría '' en librería Temboo no es válida. Configurando a 'Uncategorized'
+ATENCIÓN: Categoría '' en librería USBHost no es válida. Configurando a 'Uncategorized'
+ATENCIÓN: Categoría '' en librería WiFi no es válida. Configurando a 'Uncategorized'
+In file included from C:\Users\StarX\Documents\Arduino\F429_GD2U_helloworld\F429_GD2U_helloworld.ino:2:0:
+
+C:\arduino-1.8.3\hardware\STM32GENERIC_Chris\STM32\libraries\GD2UB/GD2UB.h: In member function 'void sdcard::desel()':
+
+C:\arduino-1.8.3\hardware\STM32GENERIC_Chris\STM32\libraries\GD2UB/GD2UB.h:130:5: error: 'SPI' was not declared in this scope
+
+     SPI.transfer(0xff); // force DO release
+
+     ^
+
+C:\arduino-1.8.3\hardware\STM32GENERIC_Chris\STM32\libraries\GD2UB/GD2UB.h: In member function 'void sdcard::sd_delay(byte)':
+
+C:\arduino-1.8.3\hardware\STM32GENERIC_Chris\STM32\libraries\GD2UB/GD2UB.h:134:10: error: 'SPI' was not declared in this scope
+
+       DD SPI.transfer(0xff);
+
+          ^
+
+C:\arduino-1.8.3\hardware\STM32GENERIC_Chris\STM32\libraries\GD2UB/GD2UB.h: In member function 'void sdcard::cmd(byte, uint32_t, uint8_t)':
+
+C:\arduino-1.8.3\hardware\STM32GENERIC_Chris\STM32\libraries\GD2UB/GD2UB.h:149:8: error: 'SPI' was not declared in this scope
+
+     DD SPI.transfer(0x40 | cmd);
+
+        ^
+
+C:\arduino-1.8.3\hardware\STM32GENERIC_Chris\STM32\libraries\GD2UB/GD2UB.h: In member function 'byte sdcard::response()':
+
+C:\arduino-1.8.3\hardware\STM32GENERIC_Chris\STM32\libraries\GD2UB/GD2UB.h:161:9: error: 'SPI' was not declared in this scope
+
+     r = SPI.transfer(0xff);
+
+         ^
+
+C:\arduino-1.8.3\hardware\STM32GENERIC_Chris\STM32\libraries\GD2UB/GD2UB.h: In member function 'byte sdcard::R1()':
+
+C:\arduino-1.8.3\hardware\STM32GENERIC_Chris\STM32\libraries\GD2UB/GD2UB.h:172:5: error: 'SPI' was not declared in this scope
+
+     SPI.transfer(0xff);   // trailing byte
+
+     ^
+
+C:\arduino-1.8.3\hardware\STM32GENERIC_Chris\STM32\libraries\GD2UB/GD2UB.h: In member function 'byte sdcard::sdR3(uint32_t&)':
+
+C:\arduino-1.8.3\hardware\STM32GENERIC_Chris\STM32\libraries\GD2UB/GD2UB.h:179:26: error: 'SPI' was not declared in this scope
+
+       ocr = (ocr << 8) | SPI.transfer(0xff);
+
+                          ^
+
+C:\arduino-1.8.3\hardware\STM32GENERIC_Chris\STM32\libraries\GD2UB/GD2UB.h:180:5: error: 'SPI' was not declared in this scope
+
+     SPI.transfer(0xff);   // trailing byte
+
+     ^
+
+C:\arduino-1.8.3\hardware\STM32GENERIC_Chris\STM32\libraries\GD2UB/GD2UB.h: In member function 'byte sdcard::sdR7()':
+
+C:\arduino-1.8.3\hardware\STM32GENERIC_Chris\STM32\libraries\GD2UB/GD2UB.h:190:7: error: 'SPI' was not declared in this scope
+
+       SPI.transfer(0xff);
+
+       ^
+
+C:\arduino-1.8.3\hardware\STM32GENERIC_Chris\STM32\libraries\GD2UB/GD2UB.h: In member function 'void sdcard::begin(byte)':
+
+C:\arduino-1.8.3\hardware\STM32GENERIC_Chris\STM32\libraries\GD2UB/GD2UB.h:208:5: error: 'SPI' was not declared in this scope
+
+     SPI.setClockDivider(SPI_CLOCK_DIV64);
+
+     ^
+
+C:\arduino-1.8.3\hardware\STM32GENERIC_Chris\STM32\libraries\GD2UB/GD2UB.h:208:25: error: 'SPI_CLOCK_DIV64' was not declared in this scope
+
+     SPI.setClockDivider(SPI_CLOCK_DIV64);
+
+                         ^
+
+C:\arduino-1.8.3\hardware\STM32GENERIC_Chris\STM32\libraries\GD2UB/GD2UB.h:284:25: error: 'SPI_CLOCK_DIV2' was not declared in this scope
+
+     SPI.setClockDivider(SPI_CLOCK_DIV2);
+
+                         ^
+
+C:\arduino-1.8.3\hardware\STM32GENERIC_Chris\STM32\libraries\GD2UB/GD2UB.h:285:5: error: 'SPSR' was not declared in this scope
+
+     SPSR = (1 << SPI2X);
+
+     ^
+
+C:\arduino-1.8.3\hardware\STM32GENERIC_Chris\STM32\libraries\GD2UB/GD2UB.h:285:18: error: 'SPI2X' was not declared in this scope
+
+     SPSR = (1 << SPI2X);
+
+                  ^
+
+C:\arduino-1.8.3\hardware\STM32GENERIC_Chris\STM32\libraries\GD2UB/GD2UB.h: In member function 'void sdcard::cmd17(uint32_t)':
+
+C:\arduino-1.8.3\hardware\STM32GENERIC_Chris\STM32\libraries\GD2UB/GD2UB.h:341:12: error: 'SPI' was not declared in this scope
+
+     while (SPI.transfer(0xff) != 0xfe)
+
+            ^
+
+C:\arduino-1.8.3\hardware\STM32GENERIC_Chris\STM32\libraries\GD2UB/GD2UB.h: In member function 'void sdcard::rdn(byte*, uint32_t, uint16_t)':
+
+C:\arduino-1.8.3\hardware\STM32GENERIC_Chris\STM32\libraries\GD2UB/GD2UB.h:349:7: error: 'SPI' was not declared in this scope
+
+       SPI.transfer(0xff);
+
+       ^
+
+C:\arduino-1.8.3\hardware\STM32GENERIC_Chris\STM32\libraries\GD2UB/GD2UB.h:351:14: error: 'SPI' was not declared in this scope
+
+       *d++ = SPI.transfer(0xff);
+
+              ^
+
+C:\arduino-1.8.3\hardware\STM32GENERIC_Chris\STM32\libraries\GD2UB/GD2UB.h:353:7: error: 'SPI' was not declared in this scope
+
+       SPI.transfer(0xff);
+
+       ^
+
+C:\arduino-1.8.3\hardware\STM32GENERIC_Chris\STM32\libraries\GD2UB/GD2UB.h: In member function 'void Reader::fetch512(byte*)':
+
+C:\arduino-1.8.3\hardware\STM32GENERIC_Chris\STM32\libraries\GD2UB/GD2UB.h:720:5: error: 'SPDR' was not declared in this scope
+
+     SPDR = 0xff;
+
+     ^
+
+C:\arduino-1.8.3\hardware\STM32GENERIC_Chris\STM32\libraries\GD2UB/GD2UB.h:721:14: error: 'SPSR' was not declared in this scope
+
+     while (!(SPSR & _BV(SPIF))) ;
+
+              ^
+
+C:\arduino-1.8.3\hardware\STM32GENERIC_Chris\STM32\libraries\GD2UB/GD2UB.h:721:25: error: 'SPIF' was not declared in this scope
+
+     while (!(SPSR & _BV(SPIF))) ;
+
+                         ^
+
+C:\arduino-1.8.3\hardware\STM32GENERIC_Chris\STM32\libraries\GD2UB/GD2UB.h:721:29: error: '_BV' was not declared in this scope
+
+     while (!(SPSR & _BV(SPIF))) ;
+
+                             ^
+
+C:\arduino-1.8.3\hardware\STM32GENERIC_Chris\STM32\libraries\GD2UB/GD2UB.h:737:14: error: 'SPSR' was not declared in this scope
+
+     while (!(SPSR & _BV(SPIF))) ;
+
+              ^
+
+C:\arduino-1.8.3\hardware\STM32GENERIC_Chris\STM32\libraries\GD2UB/GD2UB.h:737:25: error: 'SPIF' was not declared in this scope
+
+     while (!(SPSR & _BV(SPIF))) ;
+
+                         ^
+
+C:\arduino-1.8.3\hardware\STM32GENERIC_Chris\STM32\libraries\GD2UB/GD2UB.h:737:29: error: '_BV' was not declared in this scope
+
+     while (!(SPSR & _BV(SPIF))) ;
+
+                             ^
+
+C:\arduino-1.8.3\hardware\STM32GENERIC_Chris\STM32\libraries\GD2UB/GD2UB.h:738:5: error: 'SPI' was not declared in this scope
+
+     SPI.transfer(0xff);
+
+     ^
+
+exit status 1
+Error compilando para la tarjeta Discovery F429ZI.

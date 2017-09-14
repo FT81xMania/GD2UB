@@ -1,0 +1,78 @@
+ATENCIÓN: Categoría '' en librería Bridge no es válida. Configurando a 'Uncategorized'
+ATENCIÓN: Categoría '' en librería Esplora no es válida. Configurando a 'Uncategorized'
+ATENCIÓN: Categoría '' en librería Ethernet no es válida. Configurando a 'Uncategorized'
+ATENCIÓN: Categoría '' en librería Firmata no es válida. Configurando a 'Uncategorized'
+ATENCIÓN: Categoría '' en librería GSM no es válida. Configurando a 'Uncategorized'
+ATENCIÓN: Categoría '' en librería Robot IR Remote no es válida. Configurando a 'Uncategorized'
+ATENCIÓN: Categoría '' en librería Robot Control no es válida. Configurando a 'Uncategorized'
+ATENCIÓN: Categoría '' en librería Robot Motor no es válida. Configurando a 'Uncategorized'
+ATENCIÓN: Categoría '' en librería Scheduler no es válida. Configurando a 'Uncategorized'
+ATENCIÓN: Categoría '' en librería SpacebrewYun no es válida. Configurando a 'Uncategorized'
+ATENCIÓN: Categoría '' en librería Stepper no es válida. Configurando a 'Uncategorized'
+ATENCIÓN: Categoría '' en librería TFT no es válida. Configurando a 'Uncategorized'
+ATENCIÓN: Categoría '' en librería Temboo no es válida. Configurando a 'Uncategorized'
+ATENCIÓN: Categoría '' en librería USBHost no es válida. Configurando a 'Uncategorized'
+ATENCIÓN: Categoría '' en librería WiFi no es válida. Configurando a 'Uncategorized'
+Opciones de compilación cambiadas, reconstruyendo todo
+In file included from C:\Users\StarX\Documents\Arduino\F429_GD2U_helloworld\F429_GD2U_helloworld.ino:2:0:
+
+C:\arduino-1.8.3\hardware\STM32GENERIC_Chris\STM32\libraries\GD2UB/GD2UB.h: In member function 'void sdcard::begin(byte)':
+
+C:\arduino-1.8.3\hardware\STM32GENERIC_Chris\STM32\libraries\GD2UB/GD2UB.h:287:5: error: 'SPSR' was not declared in this scope
+
+     SPSR = (1 << SPI2X);
+
+     ^
+
+C:\arduino-1.8.3\hardware\STM32GENERIC_Chris\STM32\libraries\GD2UB/GD2UB.h:287:18: error: 'SPI2X' was not declared in this scope
+
+     SPSR = (1 << SPI2X);
+
+                  ^
+
+C:\arduino-1.8.3\hardware\STM32GENERIC_Chris\STM32\libraries\GD2UB/GD2UB.h: In member function 'void Reader::fetch512(byte*)':
+
+C:\arduino-1.8.3\hardware\STM32GENERIC_Chris\STM32\libraries\GD2UB/GD2UB.h:722:5: error: 'SPDR' was not declared in this scope
+
+     SPDR = 0xff;
+
+     ^
+
+C:\arduino-1.8.3\hardware\STM32GENERIC_Chris\STM32\libraries\GD2UB/GD2UB.h:723:14: error: 'SPSR' was not declared in this scope
+
+     while (!(SPSR & _BV(SPIF))) ;
+
+              ^
+
+C:\arduino-1.8.3\hardware\STM32GENERIC_Chris\STM32\libraries\GD2UB/GD2UB.h:723:25: error: 'SPIF' was not declared in this scope
+
+     while (!(SPSR & _BV(SPIF))) ;
+
+                         ^
+
+C:\arduino-1.8.3\hardware\STM32GENERIC_Chris\STM32\libraries\GD2UB/GD2UB.h:723:29: error: '_BV' was not declared in this scope
+
+     while (!(SPSR & _BV(SPIF))) ;
+
+                             ^
+
+C:\arduino-1.8.3\hardware\STM32GENERIC_Chris\STM32\libraries\GD2UB/GD2UB.h:739:14: error: 'SPSR' was not declared in this scope
+
+     while (!(SPSR & _BV(SPIF))) ;
+
+              ^
+
+C:\arduino-1.8.3\hardware\STM32GENERIC_Chris\STM32\libraries\GD2UB/GD2UB.h:739:25: error: 'SPIF' was not declared in this scope
+
+     while (!(SPSR & _BV(SPIF))) ;
+
+                         ^
+
+C:\arduino-1.8.3\hardware\STM32GENERIC_Chris\STM32\libraries\GD2UB/GD2UB.h:739:29: error: '_BV' was not declared in this scope
+
+     while (!(SPSR & _BV(SPIF))) ;
+
+                             ^
+
+exit status 1
+Error compilando para la tarjeta Discovery F429ZI.
