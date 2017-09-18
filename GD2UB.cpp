@@ -1328,38 +1328,41 @@ void GDClass::cmd_number(int16_t x, int16_t y, byte font, uint16_t options, uint
 //TFTLCDCyg
 void GDClass::printNfloat(int16_t x, int16_t y, float f, int16_t Presc, byte font) {
  //Parte entera
- cmd_number(x - 2, y, font, OPT_RIGHTX | OPT_SIGNED, int(f));
+ cmd_number(x - 3, y, font, OPT_RIGHTX | OPT_SIGNED, int(f));
  //Parte entera
 
+int fadd=font;
+if(font<=15){fadd=80;}  //FT81X uso de romfont 32,33,34
+	
  Presc = abs(Presc);
  
 // Punto y parte decimal
 if (Presc==1){
- cmd_text(  x-3,     y, font, 0, ".");
+ cmd_text(  x-(fadd/10),     y, font, 0, ".");
  cmd_number(x + 3, y, font, Presc, int(10 * abs(f))); // 1 decimal
  }  
 if (Presc==2){
- cmd_text(  x-3,     y, font, 0, ".");
+ cmd_text(  x-(fadd/10),     y, font, 0, ".");
  cmd_number(x + 3, y, font, Presc, int(100 * abs(f))); // 2 decimales
  }
 if (Presc==3){  
- cmd_text(  x-3,     y, font, 0, ".");
+ cmd_text(  x-(fadd/10),     y, font, 0, ".");
  cmd_number(x + 3, y, font, Presc, int(1000 * abs(f))); //3 decimales
  }
 if (Presc==4){  
- cmd_text(  x-3,     y, font, 0, ".");
+ cmd_text(  x-(fadd/10),     y, font, 0, ".");
  cmd_number(x + 3, y, font, Presc, int(10000 * abs(f))); //4 decimales
  }
 if (Presc==5){  
- cmd_text(  x-3,     y, font, 0, ".");
+ cmd_text(  x-(fadd/10),     y, font, 0, ".");
  cmd_number(x + 3, y, font, Presc, int(100000 * abs(f))); //5 decimales
  }
 if (Presc==6){
- cmd_text(  x-3,     y, font, 0, ".");
+ cmd_text(  x-(fadd/10),     y, font, 0, ".");
  cmd_number(x + 3, y, font, Presc, int(1000000 * abs(f))); //6 decimales
  }
 if (Presc==7){
- cmd_text(  x-3,     y, font, 0, ".");
+ cmd_text(  x-(fadd/10),     y, font, 0, ".");
  cmd_number(x + 3, y, font, Presc, int(10000000 * abs(f))); //7 decimales
  }
 // Punto y parte decimal
