@@ -8,3 +8,5 @@ https://foro.ft81xmania.com
 ---18/sept/2017
 TFTLCDCyg: mejora de la presentación del punto decimal en la función printFloat
 Archivo: GD2UB.ccp
+
+Corrección del llamado de libreria en el ejemplo F429_Blink_led_MILLIS
