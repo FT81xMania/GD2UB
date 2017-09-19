@@ -1,6 +1,4 @@
-//#include <EEPROM.h> 
-#include <SPI.h>
-#include <GD23STM32U.h>
+#include <GD2UB.h>
 
 #define LEDP1      PG13
 #define LEDP2      PG14
