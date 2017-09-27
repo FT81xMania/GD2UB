@@ -37,7 +37,7 @@
 
 #define FreqSDIO         (21000000)  // (21000000)=21 MHz    (42000000)=42 MHz
 
-#define FreqSPI1         (3000000)  // (18000000)=18MHz
+#define FreqSPI1         (10500000)  // (10500000)=10.5MHz  (18000000)=18MHz
 #define FreqSPI2         (36)  // (18)=18 MHz    (36)=36 MHz
 
 #define __F429ZIT6__  //__F407ZGT6__ __F407VET6__  __F103ZET6__  __F103VET6__  __F103C8T6__  __F429ZIT6__
