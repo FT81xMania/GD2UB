@@ -570,8 +570,6 @@ void GDClass::begin(uint8_t options) {
     GDTR.wr(REG_ROTATE, ROTACION);
    }
 
-
-
    if (TFT_FT80X2843 == 1)
    {
 //////////FT800-Gameduino2//////////
@@ -582,10 +580,6 @@ void GDClass::begin(uint8_t options) {
     //#endif
     //GDTR.wr(REG_ROTATE, ROTACION);
 //////////FT800-Gameduino2//////////
-
-
-
-
 
 //////////FT813//////////
     GD.wr32(REG_HCYCLE, 1000);//548
@@ -604,41 +598,13 @@ void GDClass::begin(uint8_t options) {
 //////////FT813//////////
    }
 
-
-
    if (TFT_FT81X_ENABLE == 1)
    {
-
-// ******************************************************************************************
-//    REGISTOS CORRECTOS PARA FT813    20 JULIO DE 2017 Julio C. González (TFTLCDCyg)
-// ******************************************************************************************
-
-#if(SCREEN_FT81X == 13)
-   {
-GD.wr32(REG_HCYCLE, 1000);//548
-GD.wr32(REG_HOFFSET, 46);
-GD.wr32(REG_HSIZE, 800);
-GD.wr32(REG_HSYNC0, 0);
-GD.wr32(REG_HSYNC1, 41);
-GD.wr32(REG_VCYCLE, 525);
-GD.wr32(REG_VOFFSET, 23);
-GD.wr32(REG_VSIZE, 480);
-GD.wr32(REG_VSYNC0, 0);
-GD.wr32(REG_VSYNC1, 10);
-GD.wr32(REG_DITHER, 0);
-GD.wr32(REG_PCLK_POL, 1);//1
-GD.wr32(REG_PCLK, 2);//5
-//GD.wr(REG_ROTATE, 0);
-//GD.wr(REG_SWIZZLE, 0);//3 for GD2
-   }
-#endif
-
-// ******************************************************************************************
-//    REGISTOS CORRECTOS PARA FT810    24 JUNIO DE 2017 Tomas F. LINARES (lightcalamar)
-// ******************************************************************************************
-
 #if(SCREEN_FT81X == 10)
    {
+// ******************************************************************************************
+//    REGISTOS CORRECTOS PARA FT810    24 JUNIO DE 2017 Tomas F. LINARES (lightcalamar)
+// ******************************************************************************************	   
 GD.wr32(REG_HCYCLE, 900);//548
 GD.wr32(REG_HOFFSET, 43);
 GD.wr32(REG_HSIZE, 800);
@@ -653,7 +619,56 @@ GD.wr32(REG_DITHER, 1);
 GD.wr32(REG_PCLK_POL, 1);//1
 GD.wr32(REG_PCLK, 3);//5
 GD.wr(REG_ROTATE, 0);
-GD.wr(REG_SWIZZLE, 0);//3 for GD2
+GD.wr(REG_SWIZZLE, 0);//3 for gameduino 2
+// ******************************************************************************************	   	   
+   }
+#endif
+
+#if(SCREEN_FT81X == 11)
+  {
+// ******************************************************************************************
+//    REGISTOS CORRECTOS PARA FT811    30 SEPTIEMBRE DE 2017 Tomas F. LINARES (lightcalamar)
+// ******************************************************************************************
+GD.wr32(REG_HCYCLE, 1000);//548
+GD.wr32(REG_HOFFSET, 43);
+GD.wr32(REG_HSIZE, 800);
+GD.wr32(REG_HSYNC0, 0);
+GD.wr32(REG_HSYNC1, 41);
+GD.wr32(REG_VCYCLE, 500);
+GD.wr32(REG_VOFFSET, 12);
+GD.wr32(REG_VSIZE, 480);
+GD.wr32(REG_VSYNC0, 0);
+GD.wr32(REG_VSYNC1, 10);
+GD.wr32(REG_DITHER, 1);
+GD.wr32(REG_PCLK_POL, 1);//1
+GD.wr32(REG_PCLK, 3);//5
+GD.wr(REG_ROTATE, 0);
+GD.wr(REG_SWIZZLE, 0);//3 for gameduino 2
+// ******************************************************************************************
+  }
+#endif	   
+	   
+#if(SCREEN_FT81X == 13)
+   {
+// ******************************************************************************************
+//    REGISTOS CORRECTOS PARA FT813    20 JULIO DE 2017 Julio C. González (TFTLCDCyg)
+// ******************************************************************************************
+GD.wr32(REG_HCYCLE, 1000);//548
+GD.wr32(REG_HOFFSET, 46);
+GD.wr32(REG_HSIZE, 800);
+GD.wr32(REG_HSYNC0, 0);
+GD.wr32(REG_HSYNC1, 41);
+GD.wr32(REG_VCYCLE, 525);
+GD.wr32(REG_VOFFSET, 23);
+GD.wr32(REG_VSIZE, 480);
+GD.wr32(REG_VSYNC0, 0);
+GD.wr32(REG_VSYNC1, 10);
+GD.wr32(REG_DITHER, 0);
+GD.wr32(REG_PCLK_POL, 1);//1
+GD.wr32(REG_PCLK, 2);//5
+//GD.wr(REG_ROTATE, 0);
+//GD.wr(REG_SWIZZLE, 0);//3 for gameduino 2
+// ******************************************************************************************
    }
 #endif
    }
@@ -686,7 +701,6 @@ GD.wr(REG_SWIZZLE, 0);//3 for GD2
     cmd_setrotate(ORIENTACION);  //FT81X
     //GDTR.wr(REG_ROTATE, ROTACION);  //FT80X
    }
-
 
   flush();
 
